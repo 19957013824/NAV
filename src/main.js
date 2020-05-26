@@ -6,8 +6,8 @@ var i = 0;
 const hashMap = xObject || [
     {
         logo: 'A',
-        url: 'https://www.acfun.cn',
-        text: 'a站'
+        url: 'https://douban.com',
+        text: '豆瓣'
     },
     {
         logo: 'B',
@@ -54,7 +54,6 @@ const render = () => {
 }
 
 render()
-// const logo
 $('.addButton')
     .on('click', function () {
         $('#background').addClass('lucency')
@@ -133,6 +132,8 @@ $('#done').on('click', function (e) {
     }
 })
 
+
+
 $('.addButton').on('click', () => {
     $('.dialog-title').text('添加快捷方式')
 })
@@ -140,13 +141,6 @@ $('.addButton').on('click', () => {
 $('.amend').on('click', () => {
     $('.dialog-title').text('修改快捷方式')
 })
-
-
-window.onbeforeunload = () => {
-    const string = JSON.stringify(hashMap)
-    window.localStorage.setItem('x', string)
-}
-
 
 $('.field-input').on('focus', function () {
     $(this).parent().next().addClass('newStyle')
@@ -169,3 +163,9 @@ $('.url').on('blur', () => {
 $('.cancel').on('click', function () {
     $(this).addClass('protuberance')
 })
+
+
+// window.onbeforeunload = () => {
+//     const string = JSON.stringify(hashMap)
+//     window.localStorage.setItem('x', string)
+// }

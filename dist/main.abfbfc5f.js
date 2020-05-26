@@ -125,8 +125,8 @@ var xObject = JSON.parse(x);
 var i = 0;
 var hashMap = xObject || [{
   logo: 'A',
-  url: 'https://www.acfun.cn',
-  text: 'a站'
+  url: 'https://douban.com',
+  text: '豆瓣'
 }, {
   logo: 'B',
   url: 'https://bilibili.com',
@@ -155,8 +155,7 @@ var render = function render() {
   });
 };
 
-render(); // const logo
-
+render();
 $('.addButton').on('click', function () {
   $('#background').addClass('lucency');
   $('#diy-webpage').addClass('show');
@@ -236,12 +235,6 @@ $('.addButton').on('click', function () {
 $('.amend').on('click', function () {
   $('.dialog-title').text('修改快捷方式');
 });
-
-window.onbeforeunload = function () {
-  var string = JSON.stringify(hashMap);
-  window.localStorage.setItem('x', string);
-};
-
 $('.field-input').on('focus', function () {
   $(this).parent().next().addClass('newStyle');
 });
@@ -262,6 +255,9 @@ $('.url').on('blur', function () {
 });
 $('.cancel').on('click', function () {
   $(this).addClass('protuberance');
-});
+}); // window.onbeforeunload = () => {
+//     const string = JSON.stringify(hashMap)
+//     window.localStorage.setItem('x', string)
+// }
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.826280ae.js.map
+//# sourceMappingURL=main.abfbfc5f.js.map
