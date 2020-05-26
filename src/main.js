@@ -165,7 +165,7 @@ $('.cancel').on('click', function () {
 })
 
 
-// window.onbeforeunload = () => {
-//     const string = JSON.stringify(hashMap)
-//     window.localStorage.setItem('x', string)
-// }
+window.onbeforeunload = () => {
+    const string = JSON.stringify(hashMap)
+    window.localStorage.setItem('x', string)
+}
