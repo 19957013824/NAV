@@ -255,9 +255,11 @@ $('.url').on('blur', function () {
 });
 $('.cancel').on('click', function () {
   $(this).addClass('protuberance');
-}); // window.onbeforeunload = () => {
-//     const string = JSON.stringify(hashMap)
-//     window.localStorage.setItem('x', string)
-// }
+});
+
+window.onbeforeunload = function () {
+  var string = JSON.stringify(hashMap);
+  window.localStorage.setItem('x', string);
+};
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.abfbfc5f.js.map
+//# sourceMappingURL=main.6d1347a7.js.map
